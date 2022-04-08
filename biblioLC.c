@@ -2,7 +2,8 @@
 
 
 int main(){
-    
+    Livre* l = creerlivre(13,"Miserables","Victor");
+    free(l);
     return 0;
 }
 // allocation dynamique
@@ -13,7 +14,8 @@ Livre* creerlivre(int num,char* titre,char* auteur){
      Livre*l =(Livre*)malloc(sizeof(Livre));
      if (l ==NULL) return NULL;
      l->num=num;
-     strdup(l->auteur);
-     strdup(l->titre);
+     l->auteur=strdup(auteur);
+     l->titre=strdup(titre);
      l->suiv = NULL;
+    return l;
 }

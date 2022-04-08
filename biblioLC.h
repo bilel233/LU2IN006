@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 typedef struct livre{
     int num;
     char* titre;
     char *auteur;
-    char* titre;
     struct livre* suiv;
 }Livre;
 
